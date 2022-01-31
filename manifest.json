@@ -1,0 +1,43 @@
+{
+  "name": "Yandex Music (Chrome support)",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "scripting", 
+    "tabs",
+    "tabCapture",
+    "storage"
+  ],
+  "description": "Adds media actions and a player popup",
+  "background": {
+    "service_worker": "js/worker.js"
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://*.yandex.com/*"
+    ]
+  },
+  "host_permissions": [
+    "*://*.yandex.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "js/media-session.js" ],
+      "matches": [ "*://*.yandex.com/*" ]
+    }
+  ], 
+  "action": {
+    "default_title": "Yandex Music Extension",
+    "default_popup": "views/popup.html",
+    "default_icon": {
+      "16": "img/ya-music.png",
+      "48": "img/ya-music@2x.png",
+      "128": "img/ya-music@3x.png"
+     }
+  },
+  "icons": {
+   "16": "img/ya-music.png",
+   "48": "img/ya-music@2x.png",
+   "128": "img/ya-music@3x.png"
+  }
+}

@@ -6,7 +6,8 @@
     "scripting", 
     "tabs",
     "tabCapture",
-    "storage"
+    "storage",
+    "notifications"
   ],
   "description": "Adds media actions and a player popup",
   "background": {
@@ -14,16 +15,20 @@
   },
   "externally_connectable": {
     "matches": [
-      "*://*.yandex.com/*"
+      "*://music.yandex.com/*",
+      "*://music.yandex.ru/*"
     ]
   },
   "host_permissions": [
-    "*://*.yandex.com/*"
+    "*://music.yandex.com/*"
   ],
   "web_accessible_resources": [
     {
       "resources": [ "js/media-session.js" ],
-      "matches": [ "*://*.yandex.com/*" ]
+      "matches": [ 
+        "*://music.yandex.com/*",
+        "*://music.yandex.ru/*" 
+      ]
     }
   ], 
   "action": {
